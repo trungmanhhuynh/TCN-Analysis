@@ -3,4 +3,4 @@ This repository aims at studying some characteristics of Temporal Neural Network
 Original code: https://github.com/locuslab/TCN
 
 
-saf
+# Understanding sequential MNIST dataset.
