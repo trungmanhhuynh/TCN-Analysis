@@ -3,4 +3,12 @@ This repository aims at studying some characteristics of Temporal Neural Network
 Original code: https://github.com/locuslab/TCN
 
 
-<h2> Understanding sequential MNIST dataset. </h2>
+# Understanding sequential MNIST dataset. 
+
+
+# Replicate the results:
+In the directory mnist_pixels, type
+```
+>> python pmnist_test.py 
+```
+
