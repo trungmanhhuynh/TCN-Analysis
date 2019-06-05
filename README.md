@@ -228,11 +228,14 @@ It is important to make sure the network's receptive field is greater than input
 can calculate the number of layer L needed to cover entire input length. 
 
 In each layer l, the history (covered) by an node is F(l) = F(l-1) + (k-1)d = F(l-1) + (k-1)2^{l-1}
-= (k-1)(2^0 + ...+ 2^{l-1}) = (k-1)(2^l -1) 
-
+= (k-1)(2^0 + ...+ 2^{l-1}) = (k-1)(2^l -1)  
 Check:  
 F(1) = (3-1)(2^1 - 1) = 2 (correct)  
-F(2) = (3-1)(2^2 - 1) = 6 (correct)
+F(2) = (3-1)(2^2 - 1) = 6 (correct)  
+In our example, length of input is 784, thus the number of layer needed is  
+784 = 2(2^l-1) => l = 
+
+
 
 
 
