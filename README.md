@@ -24,7 +24,7 @@ Test set: Average loss: 0.0385, Accuracy: 9891/10000 (98%)
 
 ## Network Architectures
 <details>
-<summary> code </summary> <p>
+<summary> Network Model </summary> <p>
 
 ```
 Namespace(batch_size=64, clip=-1, cuda=True, dropout=0.05, epochs=20, ksize=7, levels=8, log_interval=100, lr=0.002, nhid=25, optim='Adam', permute=False, seed=1111)
