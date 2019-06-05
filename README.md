@@ -232,11 +232,9 @@ In each layer l, the history (covered) by an node is F(l) = F(l-1) + (k-1)d = F(
 Check:  
 F(1) = (3-1)(2^1 - 1) = 2 (correct)  
 F(2) = (3-1)(2^2 - 1) = 6 (correct)  
-In our example, length of input is 784, thus the number of layer needed is  
-784 = 2(2^l-1) => l = 
-
-
-
+In our example, length of input is 784, k =7 thus the number of layer needed is  
+784 = (7-1)(2^l-1) => l = 7.04. Thus, l must be at least 8 levels. 
+In fact, if l = 8, the network's receptive field is 6(2^8-1) = 1530 in history size
 
 
 ## References. 
