@@ -3,7 +3,8 @@ This repository aims at studying some characteristics of Temporal Neural Network
 Original code: https://github.com/locuslab/TCN
 
 
-# Understanding sequential MNIST dataset. 
+# Sequential MNIST dataset. 
+MNIST dataset has
 
 
 # Replicate the results:
