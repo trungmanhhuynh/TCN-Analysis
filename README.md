@@ -224,6 +224,17 @@ self.downsample = nn.Conv1d(n_inputs, n_outputs, 1) if n_inputs != n_outputs els
 
 
 ## Calculating receptive field.
+It is important to make sure the network's receptive field is greater than input length. Assume the kernel size is fixed (=3), the dilation size is double every layer d = 2^(l-1), where l = {1,...,L} is the index of each layer. l = 0 is input layer. We 
+can calculate the number of layer L needed to cover entire input length. 
+
+In each layer l, the history (covered) by an node is F(l) = F(l-1) + (k-1)d = F(l-1) + (k-1)2^{l-1}
+= (k-1)(2^0 + ...+ 2^{l-1}) = (k-1)(2^l -1) 
+
+Check:  
+F(1) = (3-1)(2^1 - 1) = 2 (correct)  
+F(2) = (3-1)(2^2 - 1) = 6 (correct)
+
+
 
 ## References. 
 [1] Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. "An empirical evaluation of generic convolutional and recurrent networks for sequence modeling." arXiv preprint arXiv:1803.01271 (2018).
