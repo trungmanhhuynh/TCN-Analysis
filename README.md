@@ -3,7 +3,7 @@ This repository aims at studying some characteristics of Temporal Neural Network
 Original code: https://github.com/locuslab/TCN
 
 
-# Sequential MNIST dataset. 
+## Sequential MNIST dataset. 
 MNIST dataset has 60k training and 10k testing samples. Each is a 28x28 image (784 pixels). 
 TCN model observe all 784 pixels in a sequence manner. In each time step, it obseves the next pixel
 as inputs and produce the prediction result. 
@@ -12,7 +12,7 @@ In classification task, the result at the last time step will be used as input t
 for classification. Thus, it is important to set kernel_size, #levels, #dilation, so that the receptive field
 covers all input pixels. In other words, the information from all pixels are learned in the last output node. 
 
-# Replicate the results:
+## Replicate the results:
 In the directory mnist_pixels, type
 ```
 >> python pmnist_test.py 
@@ -24,7 +24,7 @@ Test set: Average loss: 0.0385, Accuracy: 9891/10000 (98%)
 
 ## Network Architectures
 <details>
-<summary> Network Model </summary> <p>
+<summary> Click to see network model for sequential MNIST </summary> <p>
 
 ```
 Namespace(batch_size=64, clip=-1, cuda=True, dropout=0.05, epochs=20, ksize=7, levels=8, log_interval=100, lr=0.002, nhid=25, optim='Adam', permute=False, seed=1111)
@@ -208,5 +208,11 @@ TCN(
 </p></details>
 
 <img src="https://user-images.githubusercontent.com/13492723/58992907-46e2c400-87a9-11e9-8e5a-dc8e0d8408fc.JPG" width="500">
+The network used for sequential MNIST datasets is simmilar to the one presented in orginal paper [1] (figure above). It has 
+8 levels, each level is a Temporal Residual Block. Each Temporal Residul Block consists of 2 convolution layers with same kernel size, same dilation. It just one on top of the other. The simmilar image presetned in original paper below: 
+<img src="https://user-images.githubusercontent.com/13492723/58993662-6a0e7300-87ab-11e9-9353-35d4f25fee89.JPG" width="500">
 
-# Calculating receptive field.
+## Calculating receptive field.
+
+## References. 
+[1] Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. "An empirical evaluation of generic convolutional and recurrent networks for sequence modeling." arXiv preprint arXiv:1803.01271 (2018).
