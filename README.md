@@ -23,6 +23,9 @@ Test set: Average loss: 0.0385, Accuracy: 9891/10000 (98%)
 ```
 
 ## Network Architectures
+<details>
+<summary> code </summary> <p>
+
 ```
 Namespace(batch_size=64, clip=-1, cuda=True, dropout=0.05, epochs=20, ksize=7, levels=8, log_interval=100, lr=0.002, nhid=25, optim='Adam', permute=False, seed=1111)
 TCN(
@@ -202,6 +205,8 @@ TCN(
   (linear): Linear(in_features=25, out_features=10, bias=True)
 )
 ```
-<img src="https://user-images.githubusercontent.com/13492723/58992907-46e2c400-87a9-11e9-8e5a-dc8e0d8408fc.JPG" width="300">
+</p></details>
+
+<img src="https://user-images.githubusercontent.com/13492723/58992907-46e2c400-87a9-11e9-8e5a-dc8e0d8408fc.JPG" width="500">
 
 # Calculating receptive field.
