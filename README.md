@@ -212,6 +212,17 @@ The network used for sequential MNIST datasets is simmilar to the one presented 
 8 levels, each level is a Temporal Residual Block. Each Temporal Residul Block consists of 2 convolution layers with same kernel size, same dilation. It just one on top of the other. The simmilar image presetned in original paper below: 
 <img src="https://user-images.githubusercontent.com/13492723/58993662-6a0e7300-87ab-11e9-9353-35d4f25fee89.JPG" width="500">
 
+#### Residual Blocks: 
+
+This followed the same idea presented in ResNet that it is better to learn the modification (residual) F(x) of input x instead of entire transformation, so output at each resdiual block is o = activate(x + F(x)). 
+
+In TCN, the number of channels of input x and output o could be different. Look at the first resdiual block, where #in_channels = 1 
+while #out_channels = 25. To have idential channels, conv1d is used in code: 
+```
+self.downsample = nn.Conv1d(n_inputs, n_outputs, 1) if n_inputs != n_outputs else None
+```
+
+
 ## Calculating receptive field.
 
 ## References. 
