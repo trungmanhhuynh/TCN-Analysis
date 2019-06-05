@@ -236,6 +236,8 @@ In our example, length of input is 784, k =7 thus the number of layer needed is
 784 = (7-1)(2^l-1) => l = 7.04. Thus, l must be at least 8 levels. 
 In fact, if l = 8, the network's receptive field is 6(2^8-1) = 1530 in history size
 
+Other resources:  
+https://github.com/philipperemy/keras-tcn : TCN using keras with explanations.
 
 ## References. 
 [1] Bai, Shaojie, J. Zico Kolter, and Vladlen Koltun. "An empirical evaluation of generic convolutional and recurrent networks for sequence modeling." arXiv preprint arXiv:1803.01271 (2018).
