@@ -4,8 +4,13 @@ Original code: https://github.com/locuslab/TCN
 
 
 # Sequential MNIST dataset. 
-MNIST dataset has
+MNIST dataset has 60k training and 10k testing samples. Each is a 28x28 image (784 pixels). 
+TCN model observe all 784 pixels in a sequence manner. In each time step, it obseves the next pixel
+as inputs and produce the prediction result. 
 
+In classification task, the result at the last time step will be used as input to a linear layer 
+for classification. Thus, it is important to set kernel_size, #levels, #dilation, so that the receptive field
+covers all input pixels. In other words, the information from all pixels are learned in the last output node. 
 
 # Replicate the results:
 In the directory mnist_pixels, type
