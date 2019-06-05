@@ -202,3 +202,6 @@ TCN(
   (linear): Linear(in_features=25, out_features=10, bias=True)
 )
 ```
+<img src="https://user-images.githubusercontent.com/13492723/58992907-46e2c400-87a9-11e9-8e5a-dc8e0d8408fc.JPG" width="300">
+
+# Calculating receptive field.
