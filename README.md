@@ -236,6 +236,13 @@ In our example, length of input is 784, k =7 thus the number of layer needed is
 784 = (7-1)(2^l-1) => l = 7.04. Thus, l must be at least 8 levels. 
 In fact, if l = 8, the network's receptive field is 6(2^8-1) = 1530 in history size
 
+## Casual Convolution:
+To ensure casual convolution, the implementation using [Chomp1d](https://github.com/trungmanhhuynh/TCN-Analysis/blob/be3d74798afc407d762674f26050ecf93f416da4/TCN/tcn.py#L6).
+
+The idea is at convolution layer, it adds padding (k-1)d units at both sides of input.
+The chomp1d layer truncates (k-1)d on the right side of output. This also ensures
+the length of outputs = length of inputs.
+
 ## Other resources:  
 https://github.com/philipperemy/keras-tcn : TCN with keras with explanations.  
 https://github.com/Baichenjia/Tensorflow-TCN: TCN with TensorFlow 
